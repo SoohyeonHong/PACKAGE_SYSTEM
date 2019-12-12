@@ -3,7 +3,7 @@
 #include "storage.h"
 
 #define N_BUILDING				10
-#define N_FLOOR					10
+#define N_FLOOR					15
 #define N_ROOM					10
 
 #define STORAGE_FILEPATH 		"storage.txt"
@@ -60,8 +60,13 @@ int main(int argc, char *argv[]) {
 		return -1;
 	}
 	
-	printf("------- Unmanned Delivery Storage System START -------\n");
-	
+	printf("------- Unmanned Delivery Storage System START -------\n\n");
+	printf("------ ¡Ù WELCOME TO SOOHYEON VIEW APARTMENT ¡Ù ------\n\n");
+	printf("             < APARTMENT INFORMATION > \n");
+	printf("---------         BUILDINGS  :  10         -----------\n");
+	printf("---------         FLOORS     :  15         -----------\n");
+	printf("---------         ROOMS      :  10         -----------\n");
+
 	do
 	{
         //2. menu printing
@@ -149,11 +154,13 @@ int main(int argc, char *argv[]) {
 					printf(" -----------> Storage (%i,%i) is empty or invalid!\n", x, y);
 					continue;
 				}
+				
                 //try to extract the cell
 				if (str_extractStorage(x,y) != 0)
 				{
 					printf(" -----------> Failed to extract my package!\n");
 				}
+				
 				break;
 				
             //4-4. command analysis : print the storage status
